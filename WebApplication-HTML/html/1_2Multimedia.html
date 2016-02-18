@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        img:hover{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var video;
+        window.onload = function () {
+            video = document.getElementById("sampleVideo");
+        }
+
+        function play() {
+            video.play();
+        }
+
+        function pause() {
+            video.pause();
+        }
+
+        function back() {
+            video.currentTime -= 10;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <video height="400" width="600" id="sampleVideo" poster="../img/orange.jpg">
+                    <source src="../video/samplevideo.mp4" type="audio/mp4" />
+                </video>
+            </td>
+            <td>
+                <img id="backButton" src="../img/backword.png" onclick="back();" /><br />
+                <img id="playButton" src="../img/forward.png" onclick="play();" /><br />
+                <img id="PauseButton" src="../img/pause.png" onclick="pause();" /><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <audio controls>
+                    <source src="../audio/sampleaudio.mp3" type="audio/mp3" />
+                </audio>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
